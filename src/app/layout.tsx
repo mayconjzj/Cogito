@@ -1,4 +1,7 @@
+import { Header } from '@/components/header';
+
 import './globals.css';
+import { Providers } from './providers';
 
 export default function RootLayout({
   children
@@ -7,7 +10,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body className="max-w-[1100px] mx-auto px-2">
+        <Providers attribute="class" defaultTheme="light">
+          <Header />
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }

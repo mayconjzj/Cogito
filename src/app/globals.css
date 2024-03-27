@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Inter;
-  background-color: rgb(9, 9, 11);
-  color: rgb(250, 250, 250)
+@layer base {
+  :root {
+    --background: #fafafa;
+    --foreground: #09090b;
+
+    --border: #09090b;
+    
+    --font-inter: 'Inter';
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border
+  }
+
+  body {
+    @apply font-inter bg-background text-foreground
+  }
 }
