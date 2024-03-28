@@ -7,7 +7,7 @@ export type PostProps = {
     descriptions: string[];
     image?: string;
   }[];
-  image?: string;
+  image: string;
   slug: string;
   autor: string;
   date: string;
