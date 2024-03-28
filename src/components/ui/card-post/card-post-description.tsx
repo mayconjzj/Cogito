@@ -7,7 +7,7 @@ export const CardPostDescription = ({
   className
 }: React.HtmlHTMLAttributes<HTMLParagraphElement>) => {
   return (
-    <p className={cn('text-muted text-sm line-clamp-2', className)}>
+    <p className={cn('text-muted text-sm line-clamp-4', className)}>
       {children}
     </p>
   );

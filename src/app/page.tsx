@@ -29,7 +29,7 @@ export default function Home() {
               {postRandom.title}
             </h2>
           </Link>
-          <p className="text-muted">{postRandom.descriptions[0]}</p>
+          <p className="text-muted line-clamp-[7]">{postRandom.description}</p>
 
           <div>
             <p className="font-bold text-foreground">{postRandom.autor}</p>
@@ -51,9 +51,7 @@ export default function Home() {
               <Link href={`/post/${post.slug}`}>
                 <CardPost.Title>{post.title}</CardPost.Title>
               </Link>
-              <CardPost.Description>
-                {post.descriptions[0]}
-              </CardPost.Description>
+              <CardPost.Description>{post.description}</CardPost.Description>
               <CardPost.Autor date={post.date}>{post.autor}</CardPost.Autor>
             </CardPost.Content>
           </CardPost.Root>
