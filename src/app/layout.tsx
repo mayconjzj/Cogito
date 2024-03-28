@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="max-w-[1100px] mx-auto px-2">
+      <body className="max-w-[1000px] mx-auto px-2">
         <Providers attribute="class" defaultTheme="light">
           <Header />
           {children}

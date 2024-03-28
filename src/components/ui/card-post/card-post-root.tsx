@@ -7,7 +7,7 @@ export const CardPostRoot = ({
   return (
     <div
       className={cn(
-        'w-full max-w-[352px] h-full flex flex-col items-center justify-center gap-2',
+        'w-full max-w-[320px] h-full flex flex-col items-center justify-center gap-2',
         className
       )}
     >

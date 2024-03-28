@@ -6,7 +6,8 @@
   :root {
     --background: #fafafa;
     --foreground: #09090b;
-
+    --primary: #2563eb;
+    --muted: #52525b;
     --border: #09090b;
     
     --font-inter: 'Inter';

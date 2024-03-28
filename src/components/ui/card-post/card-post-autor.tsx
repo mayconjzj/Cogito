@@ -1,8 +1,14 @@
-export const CardPostAutor = ({ children }: { children: React.ReactNode }) => {
+export const CardPostAutor = ({
+  children,
+  date
+}: {
+  children: React.ReactNode;
+  date: string;
+}) => {
   return (
     <div>
-      <p className="font-bold text-zinc-900">{children}</p>
-      <p className="text-zinc-600 text-sm">{new Date().toLocaleDateString()}</p>
+      <p className="font-bold text-foreground">{children}</p>
+      <p className="text-muted text-sm">{date}</p>
     </div>
   );
 };

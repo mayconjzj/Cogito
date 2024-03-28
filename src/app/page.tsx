@@ -1,55 +1,60 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { posts } from '@/config/posts';
 
 import { CardPost } from '@/components/ui/card-post';
 
 export default function Home() {
+  const postRandom = posts[Math.floor(Math.random() * posts.length)];
+
   return (
     <main className="space-y-12">
       <section className="flex flex-wrap gap-8 items-center justify-center">
-        <div className="flex w-full max-w-[544px] h-[200px] sm:h-[344px] relative rounded-2xl overflow-hidden">
+        <Link
+          href={`/post/${postRandom.slug}`}
+          className="flex w-full max-w-[544px] h-[200px] sm:h-[344px] relative rounded-2xl overflow-hidden"
+        >
           <Image
-            src="/images/image.jpg"
-            alt="image"
+            src={postRandom.image}
+            alt={postRandom.title}
             fill
             className="object-cover"
           />
-        </div>
+        </Link>
 
         <div className="flex flex-col flex-1 gap-y-6">
-          <h2 className="font-black text-4xl text-blue-600">
-            Por que você deveria começar a investir na bolsa de valores
-          </h2>
-          <p className="text-zinc-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur rerum soluta tempore autem ut officiis maiores harum
-            molestiae perspiciatis voluptas dicta sit quo quidem quod, nesciunt
-            quisquam error, hic culpa.
-          </p>
+          <Link href="/post">
+            <h2 className="font-black text-4xl text-primary">
+              {postRandom.title}
+            </h2>
+          </Link>
+          <p className="text-muted">{postRandom.descriptions[0]}</p>
 
           <div>
-            <p className="font-bold text-zinc-900">Maycon Douglas</p>
-            <p className="text-zinc-600 text-sm">
-              {new Date().toLocaleDateString()}
-            </p>
+            <p className="font-bold text-foreground">{postRandom.autor}</p>
+            <p className="text-muted text-sm">{postRandom.date}</p>
           </div>
         </div>
       </section>
 
       <section className="flex flex-wrap gap-2 justify-evenly">
-        {Array.from({ length: 9 }).map((_, index) => (
-          <CardPost.Root key={index}>
-            <CardPost.Image src="/images/image.jpg" alt="image" />
+        {posts.map((post) => (
+          <CardPost.Root key={post.id}>
+            <Link
+              href={`/post/${post.slug}`}
+              className="flex w-full h-[200px] relative rounded-2xl overflow-hidden"
+            >
+              <CardPost.Image src={post.image} alt={post.title} />
+            </Link>
             <CardPost.Content>
-              <CardPost.Title>
-                Por que você deveria iniciar a investir na bolsa de valores
-              </CardPost.Title>
+              <Link href={`/post/${post.slug}`}>
+                <CardPost.Title>{post.title}</CardPost.Title>
+              </Link>
               <CardPost.Description>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                excepturi soluta nam ratione nulla, fugit vitae ipsum iste
-                voluptates alias assumenda dolores, enim fuga, recusandae minus!
-                Natus quas possimus beatae.
+                {post.descriptions[0]}
               </CardPost.Description>
-              <CardPost.Autor>Maycon Douglas</CardPost.Autor>
+              <CardPost.Autor date={post.date}>{post.autor}</CardPost.Autor>
             </CardPost.Content>
           </CardPost.Root>
         ))}
