@@ -13,7 +13,6 @@ export const posts = [
       'Pois no Brasil, como em toda grande história, havia espaço para redenção e renovação. E apesar de todos os obstáculos que enfrentava, o Brasil continuava sua jornada em busca de um futuro melhor, um futuro onde todos os seus filhos pudessem prosperar em harmonia com a terra que os sustentava.'
     ],
     slug: 'por-que-o-brasil-nao-deu-certo',
-    content: 'Content 1',
     image: '/images/por-que-o-brasil-nao-deu-certo.jpg',
     autor: 'Maycon Douglas',
     date: '27 de março de 2024'
