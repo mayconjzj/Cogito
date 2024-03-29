@@ -5,7 +5,9 @@ export const CardPostContent = ({
   className
 }: React.HtmlHTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={cn('flex flex-col flex-1 gap-y-6', className)}>
+    <div
+      className={cn('flex flex-col justify-between flex-1 gap-y-6', className)}
+    >
       {children}
     </div>
   );

@@ -16,7 +16,7 @@ export type PostProps = {
 export const posts: PostProps[] = [
   {
     id: 1,
-    title: 'Por que o Brasil não deu certo?',
+    title: 'Por Que o Brasil Não Deu Certo?',
     description:
       '"Brasil: Desafios e Esperanças" é uma reflexão envolvente sobre os obstáculos históricos e contemporâneos que moldaram o desenvolvimento do país. Desde a herança colonial até a desigualdade social e a instabilidade política, o artigo destaca os desafios enfrentados pelo Brasil. No entanto, também oferece uma visão de esperança, retratando o povo brasileiro como protagonista de sua própria história e chamando à ação para um futuro mais justo e sustentável.',
     contents: [
@@ -59,5 +59,21 @@ export const posts: PostProps[] = [
     image: '/images/por-que-o-brasil-nao-deu-certo/bandeira-do-brasil.jpg',
     autor: 'Maycon Douglas',
     date: '27 de março de 2024'
+  },
+  {
+    id: 2,
+    title: 'O sistema de Ensino é o Maior Esquema de Pirâmide?',
+    description:
+      '"Brasil: Desafios e Esperanças" é uma reflexão envolvente sobre os obstáculos históricos e contemporâneos que moldaram o desenvolvimento do país. Desde a herança colonial até a desigualdade social e a instabilidade política, o artigo destaca os desafios enfrentados pelo Brasil. No entanto, também oferece uma visão de esperança, retratando o povo brasileiro como protagonista de sua própria história e chamando à ação para um futuro mais justo e sustentável.',
+    contents: [
+      {
+        subTitle: 'Desafios e Esperanças',
+        descriptions: ['Brasil: Desafios e Esperanças']
+      }
+    ],
+    slug: 'o-sistema-de-ensino-e-o-maior-esquema-de-piramide',
+    image: '/images/por-que-o-brasil-nao-deu-certo/crescimento.jpg',
+    autor: 'Maycon Douglas',
+    date: '28 de março de 2024'
   }
 ];

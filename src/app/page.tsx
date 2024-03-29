@@ -5,6 +5,8 @@ import { posts } from '@/config/posts';
 
 import { CardPost } from '@/components/ui/card-post';
 
+const reversedPosts = posts.reverse();
+
 export default function Home() {
   const postRandom = posts[Math.floor(Math.random() * posts.length)];
 
@@ -24,7 +26,7 @@ export default function Home() {
         </Link>
 
         <div className="flex flex-col flex-1 gap-y-6">
-          <Link href="/post">
+          <Link href={`/post/${postRandom.slug}`}>
             <h2 className="font-black text-4xl text-primary">
               {postRandom.title}
             </h2>
@@ -38,8 +40,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-wrap gap-2 justify-evenly">
-        {posts.map((post) => (
+      <section className="flex flex-wrap gap-3 justify-evenly">
+        {reversedPosts.map((post) => (
           <CardPost.Root key={post.id}>
             <Link
               href={`/post/${post.slug}`}

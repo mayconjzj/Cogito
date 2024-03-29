@@ -7,7 +7,9 @@ export const CardPostTitle = ({
   className
 }: React.HtmlHTMLAttributes<HTMLHeadingElement>) => {
   return (
-    <h1 className={cn('font-black text-xl text-primary', className)}>
+    <h1
+      className={cn('font-black text-xl text-primary line-clamp-2', className)}
+    >
       {children}
     </h1>
   );
