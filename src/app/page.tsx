@@ -6,9 +6,10 @@ import { posts } from '@/config/posts';
 
 import { CardPost } from '@/components/ui/card-post';
 
+const reversedPosts = posts.reverse();
+
 export default function Home() {
   noStore();
-  const reversedPosts = posts.reverse();
   const postRandom = posts[Math.floor(Math.random() * posts.length)];
 
   return (
