@@ -45,7 +45,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   ))}
                 </div>
                 {content.image && (
-                  <div className="flex w-full h-[200px] sm:h-[450px] relative rounded-2xl overflow-hidden">
+                  <div className="flex w-full h-[200px] sm:h-[450px] relative rounded-md overflow-hidden">
                     <Image
                       src={content.image}
                       alt={content.subTitle}
