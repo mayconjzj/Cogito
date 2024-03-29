@@ -7,30 +7,36 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const post = posts.find((post) => post.slug === params.slug);
 
   return (
-    <main className="space-y-12">
-      <article className="space-y-3">
-        <Link href="/" className="text-primary hover:underline">
-          Voltar
-        </Link>
-        {post?.image && (
-          <div className="flex w-full h-[200px] sm:h-[450px] relative rounded-2xl overflow-hidden">
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              className="object-cover"
-            />
+    <main>
+      <article>
+        <div className="space-y-6 pb-10 border-b-border border-b-[0.5px]">
+          <Link href="/" className="text-muted text-md hover:text-primary">
+            Voltar
+          </Link>
+          <div>
+            <p className="text-muted text-md">Publicado no dia {post?.date}</p>
           </div>
-        )}
-        <div className="space-y-6 text-justify">
           <h1 className="font-black text-primary text-4xl">{post?.title}</h1>
-
-          <p>{post?.description}</p>
-
+          {post?.image && (
+            <div className="flex w-full h-[200px] sm:h-[450px] relative rounded-md overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
+          <p className="text-muted">{post?.description}</p>
+        </div>
+        <div className="text-justify">
           {post?.contents &&
             post.contents.map((content) => (
-              <div key={content.subTitle} className="space-y-6 text-justify">
-                <h2 className="font-black text-primary text-3xl">
+              <div
+                key={content.subTitle}
+                className="space-y-6 text-justify py-10 border-b-border border-b-[0.5px]"
+              >
+                <h2 className="font-bold text-primary text-2xl">
                   {content.subTitle}
                 </h2>
                 <div className="space-y-3">
@@ -50,15 +56,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 )}
               </div>
             ))}
-          <div>
-            <p>
-              Publicado por: <span className="font-bold">{post?.autor}</span>
-            </p>
-            <p>
-              Data:
-              <span className="text-sm text-muted">{post?.date}</span>
-            </p>
-          </div>
         </div>
       </article>
     </main>

@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className="max-w-[1000px] mx-auto px-2">
-        <Providers attribute="class" defaultTheme="light">
+        <Providers attribute="class" defaultTheme="dark">
           <Header />
           {children}
         </Providers>

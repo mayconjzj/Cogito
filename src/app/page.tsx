@@ -14,10 +14,10 @@ export default function Home() {
 
   return (
     <main className="space-y-12">
-      <section className="flex flex-wrap gap-8 items-center justify-center">
+      <section className="flex flex-wrap gap-8 items-center justify-center pb-10 border-b-border border-b-[0.5px]">
         <Link
           href={`/post/${postRandom.slug}`}
-          className="flex w-full max-w-[544px] h-[200px] sm:h-[344px] relative rounded-2xl overflow-hidden"
+          className="flex w-full max-w-[544px] h-[200px] sm:h-[344px] relative rounded-md overflow-hidden"
         >
           <Image
             src={postRandom.image}
@@ -36,7 +36,6 @@ export default function Home() {
           <p className="text-muted line-clamp-[7]">{postRandom.description}</p>
 
           <div>
-            <p className="font-bold text-foreground">{postRandom.autor}</p>
             <p className="text-muted text-sm">{postRandom.date}</p>
           </div>
         </div>
@@ -47,7 +46,7 @@ export default function Home() {
           <CardPost.Root key={post.id}>
             <Link
               href={`/post/${post.slug}`}
-              className="flex w-full h-[200px] relative rounded-2xl overflow-hidden"
+              className="flex w-full h-[200px] relative rounded-md overflow-hidden"
             >
               <CardPost.Image src={post.image} alt={post.title} />
             </Link>
@@ -56,7 +55,7 @@ export default function Home() {
                 <CardPost.Title>{post.title}</CardPost.Title>
               </Link>
               <CardPost.Description>{post.description}</CardPost.Description>
-              <CardPost.Autor date={post.date}>{post.autor}</CardPost.Autor>
+              <CardPost.Date date={post.date} />
             </CardPost.Content>
           </CardPost.Root>
         ))}
