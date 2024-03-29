@@ -27,7 +27,7 @@ export default function Home() {
 
         <div className="flex flex-col flex-1 gap-y-6">
           <Link href={`/post/${postRandom.slug}`}>
-            <h2 className="font-black text-4xl text-primary">
+            <h2 className="font-black text-4xl text-primary line-clamp-2">
               {postRandom.title}
             </h2>
           </Link>
