@@ -1,13 +1,45 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { posts } from '@/config/posts';
 
+export const generateMetadata = ({
+  params
+}: {
+  params: { slug: string };
+}): Metadata => {
+  return {
+    title: posts.find((post) => post.slug === params.slug)?.title,
+    description: posts.find((post) => post.slug === params.slug)?.description,
+    openGraph: {
+      title: posts.find((post) => post.slug === params.slug)?.title,
+      description: posts.find((post) => post.slug === params.slug)?.description
+    },
+    twitter: {
+      title: posts.find((post) => post.slug === params.slug)?.title,
+      description: posts.find((post) => post.slug === params.slug)?.description
+    },
+    authors: [{ name: 'Maycon Douglas', url: 'https://github.com/mayconjzj' }],
+    category: 'Artigo',
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/post/${params.slug}`
+    },
+    keywords: [
+      'Cogito',
+      'Conhecimento Geral',
+      'Artigos',
+      'Curiosidades',
+      `${posts.find((post) => post.slug === params.slug)?.title}`
+    ]
+  };
+};
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const post = posts.find((post) => post.slug === params.slug);
 
   return (
-    <main>
+    <main className="space-y-6">
       <article>
         <div className="space-y-6 pb-10 border-b-border border-b-[0.5px]">
           <Link href="/" className="text-muted text-md hover:text-primary">
@@ -39,7 +71,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 <h2 className="font-bold text-primary text-2xl">
                   {content.subTitle}
                 </h2>
-                <div className="space-y-3">
+                <div className="space-y-3 text-xl">
                   {content.descriptions?.map((description) => (
                     <p key={description}>{description}</p>
                   ))}
@@ -58,6 +90,37 @@ export default async function Page({ params }: { params: { slug: string } }) {
             ))}
         </div>
       </article>
+      <section className="space-y-6">
+        <h1 className="font-bold text-primary text-2xl">Outros Artigos</h1>
+        <div className="space-y-6">
+          {posts
+            .filter((post) => post.slug !== params.slug)
+            .slice(0, 5)
+            .map((post) => (
+              <div className="flex gap-x-2" key={post.slug}>
+                <Link href={`/post/${post.slug}`}>
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={200}
+                    height={150}
+                    className="object-cover min-w-[250px] rounded-md"
+                  />
+                </Link>
+                <div className="h-[150px] flex flex-col justify-evenly">
+                  <Link href={`/post/${post.slug}`}>
+                    <h2 className="font-bold text-primary text-xl">
+                      {post.title}
+                    </h2>
+                  </Link>
+                  <p className="text-muted text-md line-clamp-3">
+                    {post.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+        </div>
+      </section>
     </main>
   );
 }
