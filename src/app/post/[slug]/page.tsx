@@ -71,9 +71,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 <h2 className="font-bold text-primary text-2xl">
                   {content.subTitle}
                 </h2>
-                <div className="space-y-3 text-xl">
+                <div className="space-y-3">
                   {content.descriptions?.map((description) => (
-                    <p key={description}>{description}</p>
+                    <p className="md:text-xl" key={description}>
+                      {description}
+                    </p>
                   ))}
                 </div>
                 {content.image && (
@@ -97,14 +99,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
             .filter((post) => post.slug !== params.slug)
             .slice(0, 5)
             .map((post) => (
-              <div className="flex gap-x-2" key={post.slug}>
+              <div className="md:flex gap-x-2" key={post.slug}>
                 <Link href={`/post/${post.slug}`}>
                   <Image
                     src={post.image}
                     alt={post.title}
                     width={200}
                     height={150}
-                    className="object-cover min-w-[250px] rounded-md"
+                    className="object-cover min-w-[250px] w-full rounded-md"
                   />
                 </Link>
                 <div className="h-[150px] flex flex-col justify-evenly">

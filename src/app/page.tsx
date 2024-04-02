@@ -39,21 +39,23 @@ export default function Home() {
 
       <section className="flex flex-wrap gap-3 justify-evenly">
         {posts.map((post) => (
-          <CardPost.Root key={post.id}>
-            <Link
-              href={`/post/${post.slug}`}
-              className="flex w-full h-[200px] relative rounded-md overflow-hidden"
-            >
-              <CardPost.Image src={post.image} alt={post.title} />
-            </Link>
-            <CardPost.Content>
-              <Link href={`/post/${post.slug}`}>
-                <CardPost.Title>{post.title}</CardPost.Title>
+          <Link href={`/posts/${post.slug}`} key={post.id}>
+            <CardPost.Root>
+              <Link
+                href={`/post/${post.slug}`}
+                className="flex w-full h-[200px] relative rounded-md overflow-hidden"
+              >
+                <CardPost.Image src={post.image} alt={post.title} />
               </Link>
-              <CardPost.Description>{post.description}</CardPost.Description>
-              <CardPost.Date date={post.date} />
-            </CardPost.Content>
-          </CardPost.Root>
+              <CardPost.Content>
+                <Link href={`/post/${post.slug}`}>
+                  <CardPost.Title>{post.title}</CardPost.Title>
+                </Link>
+                <CardPost.Description>{post.description}</CardPost.Description>
+                <CardPost.Date date={post.date} />
+              </CardPost.Content>
+            </CardPost.Root>
+          </Link>
         ))}
       </section>
     </main>
