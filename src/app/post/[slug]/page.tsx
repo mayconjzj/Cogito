@@ -37,6 +37,7 @@ export const generateMetadata = ({
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const post = posts.find((post) => post.slug === params.slug);
+  console.log(post);
 
   return (
     <main className="space-y-6">
