@@ -74,7 +74,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 </h2>
                 <div className="space-y-3">
                   {content.descriptions?.map((description) => (
-                    <p className="md:text-xl" key={description}>
+                    <p className="md:text-xl text-lg" key={description}>
                       {description}
                     </p>
                   ))}
@@ -93,37 +93,39 @@ export default async function Page({ params }: { params: { slug: string } }) {
             ))}
         </div>
       </article>
-      <section className="space-y-6">
-        <h1 className="font-bold text-primary text-2xl">Outros Artigos</h1>
-        <div className="space-y-6">
-          {posts
-            .filter((post) => post.slug !== params.slug)
-            .slice(0, 5)
-            .map((post) => (
-              <div className="md:flex gap-x-2" key={post.slug}>
-                <Link href={`/post/${post.slug}`}>
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    width={200}
-                    height={150}
-                    className="object-cover min-w-[250px] w-full rounded-md"
-                  />
-                </Link>
-                <div className="h-[150px] flex flex-col justify-evenly">
+      {posts.filter((post) => post.slug !== params.slug).length > 0 && (
+        <section className="space-y-6">
+          <h1 className="font-bold text-primary text-2xl">Outros Artigos</h1>
+          <div className="space-y-6">
+            {posts
+              .filter((post) => post.slug !== params.slug)
+              .slice(0, 5)
+              .map((post) => (
+                <div className="md:flex gap-x-2" key={post.id}>
                   <Link href={`/post/${post.slug}`}>
-                    <h2 className="font-bold text-primary text-xl">
-                      {post.title}
-                    </h2>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width={200}
+                      height={150}
+                      className="object-cover min-w-[250px] w-full rounded-md"
+                    />
                   </Link>
-                  <p className="text-muted text-md line-clamp-3">
-                    {post.description}
-                  </p>
+                  <div className="h-[150px] flex flex-col justify-evenly">
+                    <Link href={`/post/${post.slug}`}>
+                      <h2 className="font-bold text-primary text-xl">
+                        {post.title}
+                      </h2>
+                    </Link>
+                    <p className="text-muted text-md line-clamp-3">
+                      {post.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-        </div>
-      </section>
+              ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }
