@@ -3,8 +3,8 @@ export type PostProps = {
   title: string;
   description: string;
   contents: {
-    subTitle?: string;
-    descriptions?: string[];
+    subTitle: string;
+    descriptions: string[];
     image?: string;
   }[];
   image: string;
