@@ -11,15 +11,13 @@ export default function Home() {
   return (
     <main className="space-y-12">
       <section className="flex flex-wrap gap-8 items-center justify-center pb-10 border-b-border border-b-[0.5px]">
-        <Link
-          href={`/post/${postRandom.slug}`}
-          className="flex w-full max-w-[544px] h-[200px] sm:h-[344px] relative rounded-md overflow-hidden"
-        >
+        <Link href={`/post/${postRandom.slug}`}>
           <Image
             src={postRandom.image}
             alt={postRandom.title}
-            fill
-            className="object-cover"
+            width={544}
+            height={344}
+            className="object-cover w-full sm:w-[544px] sm:h-[344px] overflow-hidden rounded-md"
           />
         </Link>
 
@@ -40,7 +38,7 @@ export default function Home() {
       <section className="flex flex-wrap gap-3 justify-evenly">
         {posts.map((post) => (
           <CardPost.Root key={post.id}>
-            <Link href={`/post/${post.slug}`}>
+            <Link href={`/post/${post.slug}`} className="space-y-3">
               <div className="flex w-full h-[200px] relative rounded-md overflow-hidden">
                 <CardPost.Image src={post.image} alt={post.title} />
               </div>

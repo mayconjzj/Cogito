@@ -32,7 +32,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}`
   },
-  keywords: ['Cogito', 'Conhecimento Geral', 'Artigos', 'Curiosidades'],
+  keywords: [
+    'Cogito',
+    'Conhecimento Geral',
+    'Artigos',
+    'Curiosidades',
+    'Artigo',
+    'Blog',
+    'Informações',
+    'Tecnologia',
+    'Ciência',
+    'História'
+  ],
   verification: {
     google: 'TxSfWovss5wRRrEt5OcWFHccbCtavJrUE9BnnYbOPzw'
   }

@@ -29,6 +29,9 @@ export const generateMetadata = ({
       'Cogito',
       'Conhecimento Geral',
       'Artigos',
+      'Blog',
+      'Post',
+      'Informações',
       'Curiosidades',
       `${posts.find((post) => post.slug === params.slug)?.title}`
     ]
@@ -51,14 +54,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </div>
           <h1 className="font-black text-primary text-4xl">{post?.title}</h1>
           {post?.image && (
-            <div className="flex w-full h-[200px] sm:h-[450px] relative rounded-md overflow-hidden">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
-            </div>
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={768}
+              height={512}
+              className="object-cover w-full max-h-[550px] rounded-md overflow-hidden"
+            />
           )}
           <p className="text-muted">{post?.description}</p>
         </div>
@@ -80,14 +82,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   ))}
                 </div>
                 {content.image && (
-                  <div className="flex w-full h-[200px] sm:h-[450px] relative rounded-md overflow-hidden">
-                    <Image
-                      src={content.image}
-                      alt={content.subTitle}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <Image
+                    src={content.image}
+                    alt={content.subTitle}
+                    width={768}
+                    height={512}
+                    className="object-cover rounded-md w-full max-h-[550px] overflow-hidden"
+                  />
                 )}
               </div>
             ))}
@@ -101,17 +102,20 @@ export default async function Page({ params }: { params: { slug: string } }) {
               .filter((post) => post.slug !== params.slug)
               .slice(0, 5)
               .map((post) => (
-                <div className="md:flex gap-x-2" key={post.id}>
+                <div
+                  className="sm:flex gap-x-2 space-y-2 items-center"
+                  key={post.id}
+                >
                   <Link href={`/post/${post.slug}`}>
                     <Image
                       src={post.image}
                       alt={post.title}
-                      width={200}
-                      height={150}
-                      className="object-cover min-w-[250px] w-full rounded-md"
+                      width={768}
+                      height={512}
+                      className="object-cover min-w-[250px] h-[150px] w-full rounded-md"
                     />
                   </Link>
-                  <div className="h-[150px] flex flex-col justify-evenly">
+                  <div className="h-[150px] space-y-2 flex flex-col justify-evenly">
                     <Link href={`/post/${post.slug}`}>
                       <h2 className="font-bold text-primary text-xl">
                         {post.title}
