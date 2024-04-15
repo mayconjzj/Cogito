@@ -1,57 +1,26 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
-import { posts } from '@/config/posts';
-
-import { CardPost } from '@/components/ui/card-post';
-
 export default function Home() {
-  const postRandom = posts[Math.floor(Math.random() * posts.length)];
-
   return (
-    <main className="space-y-12">
-      <section className="flex flex-wrap gap-8 items-center justify-center pb-10 border-b-border border-b-[0.5px]">
-        <Link href={`/post/${postRandom.slug}`}>
-          <Image
-            src={postRandom.image}
-            alt={postRandom.title}
-            width={544}
-            height={344}
-            className="object-cover w-full sm:w-[544px] sm:h-[344px] overflow-hidden rounded-md"
-          />
-        </Link>
+    <section className="space-y-6 max-w-[1080px] m-auto">
+      <h1 className="text-xl font-thin">Artigos</h1>
 
-        <div className="flex flex-col flex-1 gap-y-6">
-          <Link href={`/post/${postRandom.slug}`}>
-            <h2 className="font-black text-4xl text-primary line-clamp-2">
-              {postRandom.title}
-            </h2>
+      <ul className="space-y-6">
+        <li>
+          <Link href={'/post/acfvnf'}>
+            <div className="bg-primary p-4 space-y-6">
+              <h2 className="text-lg font-bold">O que é o dinheiro?</h2>
+              <div className="bg-blue-500 w-full h-[160px]" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                esse enim explicabo inventore vero excepturi quis similique
+                omnis molestiae fugit consectetur, voluptatum, repellendus natus
+                dicta, ex facere distinctio deleniti ducimus.
+              </p>
+            </div>
           </Link>
-          <p className="text-muted line-clamp-[7]">{postRandom.description}</p>
-
-          <div>
-            <p className="text-muted text-sm">{postRandom.date}</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex flex-wrap gap-3 justify-evenly">
-        {posts.map((post) => (
-          <CardPost.Root key={post.id}>
-            <Link href={`/post/${post.slug}`} className="space-y-3">
-              <div className="flex w-full h-[200px] relative rounded-md overflow-hidden">
-                <CardPost.Image src={post.image} alt={post.title} />
-              </div>
-              <CardPost.Content>
-                <CardPost.Title>{post.title}</CardPost.Title>
-
-                <CardPost.Description>{post.description}</CardPost.Description>
-                <CardPost.Date date={post.date} />
-              </CardPost.Content>
-            </Link>
-          </CardPost.Root>
-        ))}
-      </section>
-    </main>
+        </li>
+      </ul>
+    </section>
   );
 }

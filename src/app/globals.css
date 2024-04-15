@@ -5,15 +5,15 @@
 @layer base {
   :root {
     --background: #fafafa;
-    --foreground: #09090b;
+    --foreground: #000;
 
-    --primary: #09090b;
+    --primary: #fff;
     
     --muted: #52525b;
 
-    --border: #a1a1aa;
-    
-    --font-inter: 'Inter';
+    --border: #d4d4d8;
+
+    --font-merriweather: 'Merriweather';
   }
 
   .dark {
@@ -34,6 +34,6 @@
   }
 
   body {
-    @apply font-inter bg-background text-foreground
+    @apply font-merriweather bg-background text-foreground
   }
 }

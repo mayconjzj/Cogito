@@ -1,13 +1,7 @@
-import Link from 'next/link';
-
 export const Header = () => {
   return (
-    <header className="flex items-center h-28">
-      <div>
-        <Link href="/">
-          <h1 className="text-4xl font-black text-primary">Cogito</h1>
-        </Link>
-      </div>
+    <header className="px-4 h-[70px] bg-primary flex items-center border-b-[0.5px] border-b-border">
+      <div className="font-bold text-5xl w-full max-w-[1080px] m-auto">F</div>
     </header>
   );
 };

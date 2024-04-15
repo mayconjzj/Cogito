@@ -1,52 +1,43 @@
-import type { Metadata } from 'next';
-
-import { Analytics } from '@vercel/analytics/react';
-
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
-
 import './globals.css';
+import { Metadata } from 'next';
+
+import { Header } from '@/components/header';
 
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cogito',
-    template: '%s | Cogito',
-    absolute: 'Cogito'
+    default: 'F',
+    template: '%s | F',
+    absolute: 'F'
   },
   description:
-    'Cogito: Explorando o Conhecimento Geral. Artigos envolventes e curiosidades para expandir sua mente. Descubra mais conosco!',
+    'Simplificando finanças. Dicas e estratégias para um futuro financeiro brilhante.',
   openGraph: {
-    title: 'Cogito',
+    title: 'F',
     description:
-      'Cogito: Explorando o Conhecimento Geral. Artigos envolventes e curiosidades para expandir sua mente. Descubra mais conosco!'
+      'Simplificando finanças. Dicas e estratégias para um futuro financeiro brilhante.'
   },
   twitter: {
-    title: 'Cogito',
+    title: 'F',
     description:
-      'Cogito: Explorando o Conhecimento Geral. Artigos envolventes e curiosidades para expandir sua mente. Descubra mais conosco!'
+      'Simplificando finanças. Dicas e estratégias para um futuro financeiro brilhante.'
   },
   authors: [{ name: 'Maycon Douglas', url: 'https://github.com/mayconjzj' }],
   category: 'Blog',
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}`
   },
-  keywords: [
-    'Cogito',
-    'Conhecimento Geral',
-    'Artigos',
-    'Curiosidades',
-    'Artigo',
-    'Blog',
-    'Informações',
-    'Tecnologia',
-    'Ciência',
-    'História'
-  ],
   verification: {
     google: 'TxSfWovss5wRRrEt5OcWFHccbCtavJrUE9BnnYbOPzw'
-  }
+  },
+  keywords: [
+    'Finanças pessoais',
+    'Fundamentos financeiros',
+    'Futuro financeiro',
+    'Fazer investimentos',
+    'Fiscalização financeira'
+  ]
 };
 
 export default function RootLayout({
@@ -56,13 +47,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="max-w-[1000px] mx-auto px-2">
-        <Providers attribute="class" defaultTheme="dark">
+      <body>
+        <Providers attribute="class" defaultTheme="light">
           <Header />
-          {children}
-          <Footer />
+          <main className="pt-6 px-4">{children}</main>
         </Providers>
-        <Analytics />
       </body>
     </html>
   );
