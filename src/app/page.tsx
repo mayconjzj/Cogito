@@ -9,7 +9,7 @@ export default function Home() {
       <h1 className="text-xl font-bold">Artigos</h1>
 
       <ul className="space-y-6 items-start justify-evenly">
-        {posts.map((post) => (
+        {posts?.map((post) => (
           <li key={post.slug}>
             <Link href={`/post/${post.slug}`}>
               <div className="bg-primary p-4 space-y-6 max-w-[860px]">
