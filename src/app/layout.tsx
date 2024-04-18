@@ -1,15 +1,16 @@
 import './globals.css';
 import { Metadata } from 'next';
 
+import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: {
-    default: 'F',
-    template: '%s | F',
-    absolute: 'F'
+    default: 'Finance',
+    template: '%s | Finance',
+    absolute: 'Finance'
   },
   description:
     'Simplificando finanças. Dicas e estratégias para um futuro financeiro brilhante.',
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Providers attribute="class" defaultTheme="light">
           <Header />
           <main className="pt-6 px-4">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
