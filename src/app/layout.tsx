@@ -48,6 +48,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3534989499820933"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body>
         <Providers attribute="class" defaultTheme="light">
           <Header />
