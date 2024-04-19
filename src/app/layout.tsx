@@ -51,7 +51,7 @@ export default function RootLayout({
       <body>
         <Providers attribute="class" defaultTheme="light">
           <Header />
-          <main className="pt-6 px-4">{children}</main>
+          <main className="my-6 px-2">{children}</main>
           <Footer />
         </Providers>
       </body>

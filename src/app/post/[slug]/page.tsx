@@ -41,9 +41,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
   console.log(post);
 
   return (
-    <>
-      <article className="max-w-[1080px] m-auto pb-10 bg-primary p-4">
-        <div className="space-y-6 pb-10 border-b-border border-b-[0.5px]">
+    <section className="max-w-[1080px] m-auto">
+      <article className="max-w-[860px] bg-primary p-4">
+        <div className="space-y-6 pb-10">
           <Link href="/" className="text-muted text-md hover:text-foreground">
             Voltar
           </Link>
@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               alt={post.title}
               width={768}
               height={512}
-              className="object-cover w-full max-h-[550px]"
+              className="object-cover w-full max-h-[450px]"
             />
           )}
           <p className="text-muted">{post?.description}</p>
@@ -67,12 +67,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
             post.contents.map((content) => (
               <div
                 key={content.subTitle}
-                className="space-y-6 text-justify py-10 border-b-border border-b-[0.5px]"
+                className="space-y-6 py-10 border-t-border border-t-[0.5px]"
               >
-                <h2 className="font-bold text-2xl">{content.subTitle}</h2>
+                <h2 className="font-bold text-xl">{content.subTitle}</h2>
                 <div className="space-y-3">
                   {content.descriptions?.map((description) => (
-                    <p className="md:text-xl text-lg" key={description}>
+                    <p className="md:text-lg text-justify" key={description}>
                       {description}
                     </p>
                   ))}
@@ -91,39 +91,39 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </div>
       </article>
       {posts.filter((post) => post.slug !== params.slug).length > 0 && (
-        <section className="space-y-6 max-w-[1080px] m-auto bg-primary p-4">
+        <section className="space-y-6 max-w-[1080px] m-auto bg-primary p-2">
           <h1 className="font-bold text-2xl">Outros Artigos</h1>
           <div className="space-y-6">
             {posts
               .filter((post) => post.slug !== params.slug)
               .slice(0, 5)
               .map((post) => (
-                <div
+                <Link
+                  href={`/post/${post.slug}`}
                   className="sm:flex gap-x-2 space-y-2 items-center"
                   key={post.id}
                 >
-                  <Link href={`/post/${post.slug}`}>
+                  {post.image && (
                     <Image
                       src={post.image}
                       alt={post.title}
                       width={768}
                       height={512}
-                      className="object-cover min-w-[250px] h-[150px] w-full"
+                      className="object-cover min-w-[250px] sm:max-w-[250px] w-full"
                     />
-                  </Link>
+                  )}
+
                   <div className="h-[150px] space-y-2 flex flex-col justify-evenly">
-                    <Link href={`/post/${post.slug}`}>
-                      <h2 className="font-bold text-xl">{post.title}</h2>
-                    </Link>
+                    <h2 className="font-bold text-xl">{post.title}</h2>
                     <p className="text-muted text-md line-clamp-3">
                       {post.description}
                     </p>
                   </div>
-                </div>
+                </Link>
               ))}
           </div>
         </section>
       )}
-    </>
+    </section>
   );
 }
