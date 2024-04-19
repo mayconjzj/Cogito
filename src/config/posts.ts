@@ -87,7 +87,7 @@ export const reversedPosts: PostProps[] = [
     ],
     image:
       '/posts/images/create-an-image-depicting-a-person-transitioning-from-a-chaotic-financial-scenario-with-debts-and-bi.jpeg',
-    slug: 'teste',
+    slug: 'divida-zero-estrategias-infaliveis-para-sair-do-vermelho',
     date: '19 de Abril de 2024'
   }
 ];
