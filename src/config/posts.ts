@@ -89,6 +89,69 @@ export const reversedPosts: PostProps[] = [
       '/posts/images/create-an-image-depicting-a-person-transitioning-from-a-chaotic-financial-scenario-with-debts-and-bi.jpeg',
     slug: 'divida-zero-estrategias-infaliveis-para-sair-do-vermelho',
     date: '19 de Abril de 2024'
+  },
+  {
+    id: 2,
+    title: 'Primeiros Passos no Investimento: Um Guia Simples para Iniciantes',
+    description:
+      'Explore os fundamentos do investimento com nosso guia direcionado para iniciantes. Aprenda sobre diferentes tipos de investimentos, descubra como avaliar seu perfil de risco e comece a investir, mesmo com um orçamento limitado. Este artigo proporciona dicas práticas e evita erros comuns, preparando você para uma jornada segura e rentável no mundo dos investimentos.',
+    contents: [
+      {
+        subTitle: 'Por Que Investir?',
+        descriptions: [
+          'Investir é mais do que apenas uma maneira de aumentar seu patrimônio; é uma estratégia essencial para alcançar a segurança financeira a longo prazo. Ao investir, você coloca seu dinheiro para trabalhar para você, potencialmente gerando renda passiva através de juros, dividendos ou valorização de capital. Isso não só ajuda a construir sua riqueza, mas também oferece proteção contra a inflação e contribui para alcançar objetivos financeiros importantes, como a aposentadoria ou a compra de uma casa. Começar a investir cedo pode aproveitar o poder do juro composto, maximizando o crescimento do seu investimento ao longo do tempo.'
+        ]
+      },
+      {
+        subTitle: 'Princípios Básicos do Investimento',
+        descriptions: [
+          'Entender os fundamentos dos investimentos é crucial para começar. Os investimentos variam de ações, que representam uma fração de propriedade em empresas, a títulos, que funcionam como empréstimos que pagam juros. Fundos mútuos e ETFs agrupam dinheiro de vários investidores para comprar uma variedade de ativos, oferecendo diversificação e redução de riscos.',
+          'Há duas abordagens principais: o investimento ativo, que tenta superar o mercado através de escolhas estratégicas de ativos, e o passivo, que segue um índice de mercado, resultando em menos transações e custos mais baixos. Compreender essas opções ajuda a determinar a melhor estratégia para seus objetivos e perfil de risco.'
+        ]
+      },
+      {
+        subTitle: 'Avaliando seu Perfil de Investidor',
+        descriptions: [
+          'Entender seu perfil de risco é essencial antes de começar a investir. Este perfil é determinado pela sua tolerância a riscos, objetivos financeiros, e o tempo que você planeja manter seus investimentos.',
+          'Faça a si mesmo perguntas chave como: Quais são meus objetivos financeiros? Por quanto tempo posso manter meu dinheiro investido? Como reajo a perdas no mercado? A partir dessas respostas, você poderá identificar se seu perfil é conservador, moderado ou agressivo, o que influenciará diretamente as escolhas de seus investimentos e a forma como você gerencia suas expectativas e reage às flutuações do mercado.'
+        ]
+      },
+      {
+        subTitle: 'Opções de Investimento para Iniciantes',
+        descriptions: [
+          'Iniciantes devem considerar investimentos de baixo risco para começar. Títulos de renda fixa oferecem retornos previsíveis e são menos voláteis, enquanto Fundos de Índice (ETFs) permitem diversificar investimentos com baixo custo e simplicidade, seguindo índices como o S&P 500. Essas opções são ideais para construir uma base sólida enquanto se aprende mais sobre o mercado financeiro.'
+        ]
+      },
+      {
+        subTitle: 'Como Começar a Investir com Pouco Dinheiro',
+        descriptions: [
+          'Iniciar investimentos não requer grandes somas de dinheiro. Plataformas de investimento online oferecem a flexibilidade de começar com quantias pequenas e a possibilidade de comprar frações de ações ou fundos. Investir regularmente, mesmo que sejam pequenas quantias, pode construir sua carteira de investimentos ao longo do tempo graças ao efeito do juro composto.'
+        ]
+      },
+      {
+        subTitle: 'Erros Comuns de Investidores Iniciantes e Como Evitá-los',
+        descriptions: [
+          'Investidores iniciantes frequentemente enfrentam desafios que podem comprometer seus investimentos. Dois erros comuns incluem tomar decisões baseadas em emoções e falhar na diversificação. Decisões emocionais, como comprar ações na alta por medo de perder ou vender na baixa durante pânicos de mercado, podem levar a perdas significativas. Para evitar isso, mantenha uma estratégia de investimento baseada em objetivos de longo prazo e análises, não em reações a flutuações de mercado.',
+          'Além disso, a falta de diversificação pode expor excessivamente seu portfólio a riscos. Investir em diferentes tipos de ativos e setores pode ajudar a mitigar esses riscos. A diversificação é uma ferramenta essencial para equilibrar seu portfólio e proteger seus investimentos.'
+        ]
+      },
+      {
+        subTitle: 'Recursos e Ferramentas para Aprender Mais',
+        descriptions: [
+          'Aprofundar seu conhecimento em investimentos é crucial. Para isso, explore livros sobre fundamentos de investimento, participe de cursos online em plataformas como Coursera ou Udemy, e acompanhe podcasts e blogs financeiros. Essas ferramentas ajudam a entender melhor o mercado e a refinar suas estratégias de investimento.'
+        ]
+      },
+      {
+        subTitle: 'Próximos Passos na Jornada de Investimento',
+        descriptions: [
+          'Parabéns por dar os primeiros passos na sua jornada de investimentos! Lembre-se, começar é a parte mais importante. À medida que você avança, mantenha a disciplina de investir regularmente e revisar suas estratégias à luz de seus objetivos de longo prazo. Invista tempo em educação contínua para tomar decisões financeiras mais informadas. Com persistência e aprendizado contínuo, você estará bem equipado para construir e gerenciar um portfólio que atenda às suas necessidades financeiras futuras.'
+        ]
+      }
+    ],
+    image:
+      '/posts/images/create-an-image-of-a-pathway-made-of-oversized-coins-and-financial-charts-leading-into-a-bright-hori.jpeg',
+    slug: 'primeiros-passos-no-investimento-um-guia-simples-para-iniciantes',
+    date: '19 de Abril de 2024'
   }
 ];
 

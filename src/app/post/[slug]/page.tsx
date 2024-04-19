@@ -41,7 +41,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   console.log(post);
 
   return (
-    <section className="max-w-[1080px] m-auto">
+    <section className="max-w-[1080px] m-auto space-y-6">
       <article className="max-w-[860px] bg-primary p-4">
         <div className="space-y-6 pb-10">
           <Link href="/" className="text-muted text-md hover:text-foreground">
