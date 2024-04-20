@@ -1,18 +1,12 @@
-'use client';
+import { useEffect } from 'react';
 
-import React, { useEffect } from 'react';
-
-declare global {
-  interface Window {
-    adsbygoogle?: {
-      push: () => void;
-    };
-  }
-}
-
-export const AdSense: React.FC = () => {
+export const AdSense = () => {
   useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push();
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error(e);
+    }
   }, []);
 
   return (
@@ -24,11 +18,11 @@ export const AdSense: React.FC = () => {
       ></script>
       <ins
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ display: 'block', textAlign: 'center' }}
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
         data-ad-client="ca-pub-3534989499820933"
-        data-ad-slot="5667844128"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
+        data-ad-slot="3335843182"
       ></ins>
     </>
   );
