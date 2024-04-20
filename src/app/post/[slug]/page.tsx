@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import { posts } from '@/config/posts';
 
+import { shuffleArray } from '@/utils/shuffleArray';
+
 export const generateMetadata = ({
   params
 }: {
@@ -96,9 +98,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <section className="space-y-6 max-w-[1080px] m-auto bg-primary p-2">
           <h1 className="font-bold text-2xl">Outros Artigos</h1>
           <div className="space-y-6">
-            {posts
+            {shuffleArray(posts)
               .filter((post) => post.slug !== params.slug)
-              .slice(0, 5)
+              .slice(0, 8)
               .map((post) => (
                 <Link
                   href={`/post/${post.slug}`}
