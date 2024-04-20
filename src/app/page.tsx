@@ -1,8 +1,5 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import Adsense from 'react-adsense-google';
 
 import { posts } from '@/config/posts';
 
@@ -11,12 +8,6 @@ export default function Home() {
     <section className="space-y-6 max-w-[1080px] m-auto">
       <h1 className="text-xl font-bold">Artigos</h1>
 
-      <Adsense
-        adClient="ca-pub-3534989499820933"
-        adSlot="3335843182"
-        adFormat="auto"
-        adLayout="in-article"
-      />
       <ul className="space-y-6 items-start justify-evenly">
         {posts?.map((post) => (
           <li key={post.slug}>
