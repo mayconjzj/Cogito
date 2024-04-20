@@ -1,29 +1,13 @@
-import { useEffect } from 'react';
+'use client';
 
-export const AdSense = () => {
-  useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
+import Adsense from 'react-adsense-google';
 
-  return (
-    <>
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3534989499820933"
-        crossOrigin="anonymous"
-      ></script>
-      <ins
-        className="adsbygoogle"
-        style={{ display: 'block', textAlign: 'center' }}
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
-        data-ad-client="ca-pub-3534989499820933"
-        data-ad-slot="3335843182"
-      ></ins>
-    </>
-  );
+import { cn } from '@/lib/utils';
+
+export type AdSenseProps = React.ComponentProps<typeof Adsense> & {
+  layout?: string;
+};
+
+export const AdSense = ({ className, ...props }: AdSenseProps) => {
+  return <Adsense className={cn('block text-center', className)} {...props} />;
 };

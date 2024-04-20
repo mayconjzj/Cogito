@@ -4,8 +4,6 @@ import Link from 'next/link';
 
 import { posts } from '@/config/posts';
 
-import { AdSense } from '@/components/adsense';
-
 export const generateMetadata = ({
   params
 }: {
@@ -90,7 +88,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     />
                   )}
                 </div>
-                <AdSense />
               </>
             ))}
         </div>
