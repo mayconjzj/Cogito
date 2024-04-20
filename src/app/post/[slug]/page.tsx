@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import { posts } from '@/config/posts';
 
+import { AdSense } from '@/components/adsense';
+
 export const generateMetadata = ({
   params
 }: {
@@ -65,28 +67,31 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div className="text-justify">
           {post?.contents &&
             post.contents.map((content) => (
-              <div
-                key={content.subTitle}
-                className="space-y-6 py-10 border-t-border border-t-[0.5px]"
-              >
-                <h2 className="font-bold text-xl">{content.subTitle}</h2>
-                <div className="space-y-3">
-                  {content.descriptions?.map((description) => (
-                    <p className="md:text-lg text-justify" key={description}>
-                      {description}
-                    </p>
-                  ))}
+              <>
+                <div
+                  key={content.subTitle}
+                  className="space-y-6 py-10 border-t-border border-t-[0.5px]"
+                >
+                  <h2 className="font-bold text-xl">{content.subTitle}</h2>
+                  <div className="space-y-3">
+                    {content.descriptions?.map((description) => (
+                      <p className="md:text-lg text-justify" key={description}>
+                        {description}
+                      </p>
+                    ))}
+                  </div>
+                  {content.image && (
+                    <Image
+                      src={content.image}
+                      alt={content.subTitle}
+                      width={768}
+                      height={512}
+                      className="object-cover w-full max-h-[550px] "
+                    />
+                  )}
                 </div>
-                {content.image && (
-                  <Image
-                    src={content.image}
-                    alt={content.subTitle}
-                    width={768}
-                    height={512}
-                    className="object-cover w-full max-h-[550px] "
-                  />
-                )}
-              </div>
+                <AdSense />
+              </>
             ))}
         </div>
       </article>
