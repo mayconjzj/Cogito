@@ -102,26 +102,24 @@ export default async function Page({ params }: { params: { slug: string } }) {
               .filter((post) => post.slug !== params.slug)
               .slice(0, 8)
               .map((post) => (
-                <Link
-                  href={`/post/${post.slug}`}
-                  className="sm:flex gap-x-2 space-y-2 items-center"
-                  key={post.id}
-                >
-                  {post.image && (
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      width={768}
-                      height={512}
-                      className="object-cover min-w-[250px] sm:max-w-[250px] w-full"
-                    />
-                  )}
+                <Link href={`/post/${post.slug}`} key={post.id}>
+                  <div className="sm:flex min-h-[150px] mb-6 gap-x-2 space-y-2 items-center">
+                    {post.image && (
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        width={768}
+                        height={512}
+                        className="object-cover min-w-[250px] sm:max-w-[250px] w-full"
+                      />
+                    )}
 
-                  <div className="h-[150px] space-y-2 flex flex-col justify-evenly">
-                    <h2 className="font-bold text-xl">{post.title}</h2>
-                    <p className="text-muted text-md line-clamp-3">
-                      {post.description}
-                    </p>
+                    <div className="min-h-[150px] space-y-2 flex flex-col justify-evenly">
+                      <h2 className="font-bold text-xl">{post.title}</h2>
+                      <p className="text-muted text-md line-clamp-3">
+                        {post.description}
+                      </p>
+                    </div>
                   </div>
                 </Link>
               ))}
