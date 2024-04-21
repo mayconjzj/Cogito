@@ -28,7 +28,7 @@ export const PostCard = ({ post }: { post: PostProps }) => {
       </div>
       <div className="px-3 space-y-3 ">
         <Link href={`/post/${post.slug}`}>
-          <h3 className="font-bold text-lg line-clamp-3">{post.title}</h3>
+          <h1 className="font-bold text-lg line-clamp-3">{post.title}</h1>
         </Link>
         <p className="text-muted text-sm leading-6 line-clamp-[7]">
           {post.description}

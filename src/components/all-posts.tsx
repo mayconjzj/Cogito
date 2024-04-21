@@ -26,19 +26,20 @@ export const AllPosts = () => {
         <nav>
           <ul className="flex flex-wrap gap-x-3">
             {articleFilter.map((post) => (
-              <Button
-                key={post.category}
-                variant={
-                  filteredPostsValue === post.category
-                    ? filteredPostsValue
-                    : 'none'
-                }
-                size="sm"
-                rounded="full"
-                onClick={() => dispatch(setFilteredPostsValue(post.category))}
-              >
-                {post.title}
-              </Button>
+              <li key={post.category}>
+                <Button
+                  variant={
+                    filteredPostsValue === post.category
+                      ? filteredPostsValue
+                      : 'none'
+                  }
+                  size="sm"
+                  rounded="full"
+                  onClick={() => dispatch(setFilteredPostsValue(post.category))}
+                >
+                  {post.title}
+                </Button>
+              </li>
             ))}
           </ul>
         </nav>
