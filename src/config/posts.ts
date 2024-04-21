@@ -1,5 +1,6 @@
 export type PostProps = {
   id: number;
+  category: 'personal-finances' | 'debts' | 'investments';
   title: string;
   description: string;
   contents: {
@@ -15,6 +16,7 @@ export type PostProps = {
 export const reversedPosts: PostProps[] = [
   {
     id: 1,
+    category: 'debts',
     title: 'Dívida Zero: Estratégias Infalíveis para Sair do Vermelho',
     description:
       'Chega de se afogar em dívidas! Este artigo é seu primeiro passo rumo à liberdade financeira. Se você sente que suas dívidas estão controlando sua vida, é hora de tomar as rédeas e mudar essa situação agora mesmo.',
@@ -92,7 +94,9 @@ export const reversedPosts: PostProps[] = [
   },
   {
     id: 2,
-    title: 'Primeiros Passos no Investimento: Um Guia Simples para Iniciantes',
+    category: 'investments',
+    title:
+      'Primeiros Passos nos Investimentos: Um Guia Simples para Iniciantes',
     description:
       'Explore os fundamentos do investimento com nosso guia direcionado para iniciantes. Aprenda sobre diferentes tipos de investimentos, descubra como avaliar seu perfil de risco e comece a investir, mesmo com um orçamento limitado. Este artigo proporciona dicas práticas e evita erros comuns, preparando você para uma jornada segura e rentável no mundo dos investimentos.',
     contents: [
@@ -155,6 +159,7 @@ export const reversedPosts: PostProps[] = [
   },
   {
     id: 3,
+    category: 'personal-finances',
     title:
       '10 Estratégias Inteligentes para Economizar Dinheiro no Seu Dia a Dia',
     description:
@@ -246,6 +251,7 @@ export const reversedPosts: PostProps[] = [
   },
   {
     id: 4,
+    category: 'personal-finances',
     title:
       'Como Construir um Fundo de Emergência: Guia Prático para Iniciantes',
     description:

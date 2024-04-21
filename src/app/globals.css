@@ -5,15 +5,15 @@
 @layer base {
   :root {
     --background: #fafafa;
-    --foreground: #000;
+    --foreground: #0f172a;
 
     --primary: #fff;
     
-    --muted: #52525b;
+    --muted: #71717a;
 
     --border: #d4d4d8;
 
-    --font-merriweather: 'Merriweather';
+    --font-inter: 'Inter';
   }
 
   .dark {
@@ -34,6 +34,10 @@
   }
 
   body {
-    @apply font-merriweather bg-background text-foreground
+    @apply font-inter bg-background text-foreground
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }

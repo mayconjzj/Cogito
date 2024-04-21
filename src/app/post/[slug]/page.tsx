@@ -43,8 +43,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   console.log(post);
 
   return (
-    <section className="max-w-[1080px] m-auto space-y-6">
-      <article className="max-w-[860px] bg-primary p-4">
+    <section className="px-2 sm:px-12 lg:px-24 space-y-6">
+      <article className="max-w-[860px]">
         <div className="space-y-6 pb-10">
           <Link href="/" className="text-muted text-md hover:text-foreground">
             Voltar
@@ -95,7 +95,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </div>
       </article>
       {posts.filter((post) => post.slug !== params.slug).length > 0 && (
-        <section className="space-y-6 max-w-[1080px] m-auto bg-primary p-2">
+        <section className="space-y-6">
           <h1 className="font-bold text-2xl">Outros Artigos</h1>
           <div className="space-y-6">
             {shuffleArray(posts)

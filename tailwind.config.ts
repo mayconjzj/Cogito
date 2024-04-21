@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        merriweather: ['var(--font-merriweather)']
+        inter: ['var(--font-inter)']
       },
       colors: {
         background: 'var(--background)',
