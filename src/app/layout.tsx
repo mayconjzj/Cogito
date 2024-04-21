@@ -8,9 +8,9 @@ import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Finance',
-    template: '%s | Finance',
-    absolute: 'Finance'
+    default: 'Gainly',
+    template: '%s | Gainly',
+    absolute: 'Gainly'
   },
   description:
     'Simplificando finanças. Dicas e estratégias para um futuro financeiro brilhante.',

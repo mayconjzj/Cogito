@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -5,6 +6,37 @@ import { posts } from '@/config/posts';
 
 import { AllPosts } from '@/components/all-posts';
 import { Badge } from '@/components/ui/badge';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+  description:
+    'Veja as dicas e estratégias para um futuro financeiro brilhante.',
+  openGraph: {
+    title: 'Blog',
+    description:
+      'Veja as dicas e estratégias para um futuro financeiro brilhante.'
+  },
+  twitter: {
+    title: 'Blog',
+    description:
+      'Veja as dicas e estratégias para um futuro financeiro brilhante.'
+  },
+  category: 'Blog',
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`
+  },
+  keywords: [
+    'Finanças pessoais',
+    'Fundamentos financeiros',
+    'Futuro financeiro',
+    'Fazer investimentos',
+    'Fiscalização financeira',
+    'Blog',
+    'Artigos',
+    'Dicas e estrategias',
+    'Futuro brilhante'
+  ]
+};
 
 export default function Blog() {
   return (
