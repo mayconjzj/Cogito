@@ -13,8 +13,8 @@ export const PostCard = ({ post }: { post: PostProps }) => {
           <Image
             src={`${post.image}`}
             alt={post.title}
-            width={350}
-            height={233}
+            width={768}
+            height={512}
             className="object-cover w-full overflow-hidden rounded-xl"
           />
         </Link>
@@ -28,7 +28,7 @@ export const PostCard = ({ post }: { post: PostProps }) => {
       </div>
       <div className="px-3 space-y-3 ">
         <Link href={`/post/${post.slug}`}>
-          <h3 className="font-bold text-lg">{post.title}</h3>
+          <h3 className="font-bold text-lg line-clamp-3">{post.title}</h3>
         </Link>
         <p className="text-muted text-sm leading-6 line-clamp-[7]">
           {post.description}

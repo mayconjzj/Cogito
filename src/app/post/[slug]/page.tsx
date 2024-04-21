@@ -59,7 +59,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               alt={post.title}
               width={768}
               height={512}
-              className="object-cover w-full max-h-[450px] rounded-xl overflow-hidden"
+              className="object-cover w-full rounded-xl overflow-hidden"
             />
           )}
           <p className="text-muted">{post?.description}</p>
@@ -86,7 +86,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                       alt={content.subTitle}
                       width={768}
                       height={512}
-                      className="object-cover w-full max-h-[550px] rounded-xl overflow-hidden"
+                      className="object-cover w-full rounded-xl overflow-hidden"
                     />
                   )}
                 </div>
@@ -100,7 +100,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <div className="space-y-6">
             {shuffleArray(posts)
               .filter((post) => post.slug !== params.slug)
-              .slice(0, 8)
+              .slice(0, 5)
               .map((post) => (
                 <Link href={`/post/${post.slug}`} key={post.id}>
                   <div className="sm:flex min-h-[150px] mb-6 gap-x-2 space-y-2 items-center">
@@ -108,8 +108,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
                       <Image
                         src={post.image}
                         alt={post.title}
-                        width={640}
-                        height={426}
+                        width={768}
+                        height={512}
                         className="object-cover min-w-[250px] sm:max-w-[250px] w-full rounded-xl overflow-hidden"
                       />
                     )}

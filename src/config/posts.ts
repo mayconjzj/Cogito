@@ -8,7 +8,7 @@ export type PostProps = {
     descriptions: string[];
     image?: string;
   }[];
-  image?: string;
+  image: string;
   slug: string;
   date: string;
 };
@@ -370,6 +370,50 @@ export const reversedPosts: PostProps[] = [
     image:
       '/posts/images/como-criar-um-orcamento-financeiro-eficiente-guia-passo-a-passo-para-iniciantes.jpeg',
     slug: 'como-criar-um-orcamento-financeiro-eficiente-guia-passo-a-passo-para-iniciantes',
+    date: '21 de Abril de 2024'
+  },
+  {
+    id: 6,
+    category: 'investments',
+    title:
+      'Os Segredos Revelados dos Investimentos: Como Maximizar seus Ganhos e Proteger seu Patrimônio',
+    description:
+      'Neste artigo, revelaremos os segredos dos investimentos que os grandes investidores não querem que você saiba. Descubra estratégias poderosas para maximizar seus ganhos, proteger seu patrimônio e alcançar a independência financeira. Prepare-se para uma jornada fascinante pelo mundo dos investimentos, onde desvendaremos mitos, compartilharemos insights valiosos e capacitaremos você a tomar decisões financeiras sólidas.',
+    contents: [
+      {
+        subTitle: 'Os Mitos dos Investimentos: Separando Ficção da Realidade',
+        descriptions: [
+          'No mundo dos investimentos, é fácil ser envolvido por histórias sedutoras de riqueza rápida e segredos para o sucesso financeiro. No entanto, muitos desses contos são mitos que podem levar os investidores por um caminho perigoso. Vamos desvendar alguns dos mitos mais comuns sobre investimentos e separar a ficção da realidade.',
+          'Muitos investidores acreditam que existe uma maneira de investir que é completamente segura, onde nunca se perde dinheiro mas a verdade é que todos os investimentos carregam algum nível de risco. Até mesmo investimentos considerados "seguros", como títulos do governo, têm o potencial de perder valor com mudanças nas taxas de juros.',
+          'A ideia de que é possível prever o momento certo para comprar ou vender investimentos e assim obter lucros consistentes, isso seria ótimo. Mas na realidade, o timing de mercado é extremamente difícil, senão impossível, de prever consistentemente. Tentar cronometrar o mercado muitas vezes leva a resultados abaixo do esperado e pode aumentar o risco de perdas.',
+          'Muitos acreditam que é possível enriquecer rapidamente através de investimentos em esquemas ou ativos de alto retorno. Porém a construção de riqueza é um processo gradual que requer disciplina, paciência e um plano de investimento sólido. Investimentos de alto retorno geralmente vêm com alto risco, e o sucesso financeiro sustentável geralmente vem ao longo do tempo, não da noite para o dia.'
+        ]
+      },
+      {
+        subTitle:
+          'Estratégias de Investimento Inteligentes: Como Construir um Portfólio Vencedor',
+        descriptions: [
+          'Investir é mais do que simplesmente escolher uma ação ou um fundo e esperar por retornos extraordinários. É sobre construir um portfólio diversificado e equilibrado que esteja alinhado com seus objetivos financeiros e tolerância ao risco. Vamos explorar algumas estratégias inteligentes de investimento que podem ajudá-lo a construir um portfólio vencedor:',
+          'A chave para construir um portfólio vencedor é a diversificação. Isso significa distribuir seus investimentos em diferentes classes de ativos, como ações, títulos, fundos mútuos e imóveis. Diversificar ajuda a reduzir o risco total do seu portfólio, pois diferentes classes de ativos tendem a se comportar de maneira diferente em diferentes condições de mercado.',
+          'Outra estratégia importante é a alocação de ativos, que envolve decidir quanto dinheiro investir em cada classe de ativos com base em seu perfil de risco e prazo de investimento. Por exemplo, se você é jovem e tem um alto tolerância ao risco, pode optar por investir mais em ações, que tendem a ter retornos mais altos a longo prazo, mas também são mais voláteis. Se você está mais perto da aposentadoria e tem um perfil de risco mais conservador, pode optar por investir mais em títulos e outros investimentos de renda fixa.',
+          'É importante revisar regularmente seu portfólio e fazer ajustes conforme necessário para garantir que ele permaneça alinhado com seus objetivos financeiros e tolerância ao risco. Isso pode envolver vender ativos que se tornaram sobrevalorizados e comprar ativos que estão subvalorizados, ou simplesmente ajustar sua alocação de ativos com base em mudanças em sua situação financeira ou nos mercados.'
+        ]
+      },
+      {
+        subTitle:
+          'Protegendo seu Patrimônio: Gerenciamento de Risco e Planejamento Financeiro',
+        descriptions: [
+          'Investir é uma jornada emocionante, mas também vem com seus próprios desafios e riscos. Para proteger seu patrimônio e garantir um futuro financeiro seguro, é essencial implementar estratégias de gerenciamento de risco e planejamento financeiro sólido. Vamos explorar algumas dessas estratégias:',
+          'Uma das melhores maneiras de gerenciar o risco em seu portfólio é garantir que ele esteja adequadamente diversificado. Isso significa não apenas diversificar entre diferentes classes de ativos, mas também dentro de cada classe de ativos. Por exemplo, ao investir em ações, é importante ter uma variedade de setores representados em seu portfólio para mitigar o risco específico do setor.',
+          'Ordens de stop-loss são ferramentas úteis para ajudar a proteger seus investimentos contra grandes quedas de preço. Com uma ordem de stop-loss, você define um preço de venda para uma ação e, se o preço cair para esse nível, a ordem é acionada e a ação é vendida automaticamente. Isso pode ajudar a limitar suas perdas em caso de movimentos de mercado adversos.',
+          'Realizar uma análise fundamental sólida de seus investimentos pode ajudar a avaliar o risco associado a cada ativo. Isso envolve examinar os fundamentos financeiros de uma empresa, como receitas, lucros e dívida, para determinar sua saúde financeira e perspectivas de crescimento. Ao entender melhor o risco associado a cada investimento, você pode tomar decisões mais informadas sobre como alocar seus recursos.',
+          'Além de gerenciar o risco em seus investimentos, é importante ter um plano financeiro abrangente que leve em consideração todos os aspectos de suas finanças, incluindo economia de emergência, seguro, planejamento de aposentadoria e planejamento tributário. Um planejamento financeiro sólido pode ajudar a garantir que você esteja preparado para enfrentar qualquer eventualidade e alcançar seus objetivos financeiros a longo prazo.'
+        ]
+      }
+    ],
+    image:
+      '/posts/images/os-segredos-revelados-dos-investimentos-como-maximizar-seus-ganhos-e-proteger-seu-patrimonio.jpeg',
+    slug: 'os-segredos-revelados-dos-investimentos-como-maximizar-seus-ganhos-e-proteger-seu-patrimonio',
     date: '21 de Abril de 2024'
   }
 ];

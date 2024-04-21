@@ -58,8 +58,8 @@ export default function Blog() {
                     <Image
                       src={`${post.image}`}
                       alt={post.title}
-                      width={600}
-                      height={400}
+                      width={768}
+                      height={512}
                       className="object-cover rounded-xl overflow-hidden"
                     />
                   </Link>
@@ -92,8 +92,8 @@ export default function Blog() {
                     <Image
                       src={`${post.image}`}
                       alt={post.title}
-                      width={500}
-                      height={333}
+                      width={768}
+                      height={512}
                       className="object-cover min-w-[250px] lg:max-w-[250px] w-full rounded-xl overflow-hidden"
                     />
                   </Link>
