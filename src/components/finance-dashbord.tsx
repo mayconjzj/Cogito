@@ -2,6 +2,7 @@
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { learningResources } from '@/config/learning-resources';
 import { posts } from '@/config/posts';
 import { setFinanceItemValue, states } from '@/redux/slice/finance-item';
 
@@ -22,48 +23,21 @@ export const FinanceDashboard = () => {
       </div>
       <div className="flex flex-col lg:flex-row gap-3">
         <ul className="flex flex-col">
-          <li>
-            <FinanceItem.Wrapper
-              active={financeItemValue === 'personal-finances'}
-              onClick={() => dispatch(setFinanceItemValue('personal-finances'))}
-            >
-              <FinanceItem.Title
-                active={financeItemValue === 'personal-finances'}
+          {learningResources.map((post) => (
+            <li key={post.title}>
+              <FinanceItem.Wrapper
+                active={financeItemValue === post.category}
+                onClick={() => dispatch(setFinanceItemValue(post.category))}
               >
-                Organizar as finanças
-              </FinanceItem.Title>
-              <FinanceItem.Description>
-                Aprendar a organizar e planejar suas finançasa pessoais.
-              </FinanceItem.Description>
-            </FinanceItem.Wrapper>
-          </li>
-          <li>
-            <FinanceItem.Wrapper
-              active={financeItemValue === 'debts'}
-              onClick={() => dispatch(setFinanceItemValue('debts'))}
-            >
-              <FinanceItem.Title active={financeItemValue === 'debts'}>
-                Quitar dívidas
-              </FinanceItem.Title>
-              <FinanceItem.Description>
-                Descubra estrátegias, renegociar e quitar dívidas.
-              </FinanceItem.Description>
-            </FinanceItem.Wrapper>
-          </li>
-          <li>
-            <FinanceItem.Wrapper
-              active={financeItemValue === 'investments'}
-              onClick={() => dispatch(setFinanceItemValue('investments'))}
-            >
-              <FinanceItem.Title active={financeItemValue === 'investments'}>
-                Como investir
-              </FinanceItem.Title>
-              <FinanceItem.Description>
-                Dê seus primeiros nos investimentos, quais o tipos e quais os
-                riscos.
-              </FinanceItem.Description>
-            </FinanceItem.Wrapper>
-          </li>
+                <FinanceItem.Title active={financeItemValue === post.category}>
+                  {post.title}
+                </FinanceItem.Title>
+                <FinanceItem.Description>
+                  {post.description}
+                </FinanceItem.Description>
+              </FinanceItem.Wrapper>
+            </li>
+          ))}
         </ul>
 
         {posts.length > 0 && (

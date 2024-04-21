@@ -2,15 +2,16 @@
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { articleFilter } from '@/config/article-filter';
 import { posts } from '@/config/posts';
-import { setFinanceItemValue, states } from '@/redux/slice/finance-item';
+import { setFilteredPostsValue, states } from '@/redux/slice/filtered-posts';
 
 import { Button } from './ui/button';
 import { PostCard } from './ui/post-card';
 
 export const AllPosts = () => {
-  const { financeItemValue } = useSelector(
-    (state: { financeItem: states }) => state.financeItem
+  const { filteredPostsValue } = useSelector(
+    (state: { filteredPosts: states }) => state.filteredPosts
   );
   const dispatch = useDispatch();
 
@@ -23,55 +24,35 @@ export const AllPosts = () => {
 
       <div className="space-y-6">
         <nav>
-          <ul className="flex gap-x-3">
-            <li>
+          <ul className="flex flex-wrap gap-x-3">
+            {articleFilter.map((post) => (
               <Button
+                key={post.category}
                 variant={
-                  financeItemValue === 'personal-finances'
-                    ? financeItemValue
+                  filteredPostsValue === post.category
+                    ? filteredPostsValue
                     : 'none'
                 }
                 size="sm"
                 rounded="full"
-                onClick={() =>
-                  dispatch(setFinanceItemValue('personal-finances'))
-                }
+                onClick={() => dispatch(setFilteredPostsValue(post.category))}
               >
-                Finaças pessoais
+                {post.title}
               </Button>
-            </li>
-            <li>
-              <Button
-                variant={
-                  financeItemValue === 'debts' ? financeItemValue : 'none'
-                }
-                size="sm"
-                rounded="full"
-                onClick={() => dispatch(setFinanceItemValue('debts'))}
-              >
-                Quitar dívidas
-              </Button>
-            </li>
-            <li>
-              <Button
-                variant={
-                  financeItemValue === 'investments' ? financeItemValue : 'none'
-                }
-                size="sm"
-                rounded="full"
-                onClick={() => dispatch(setFinanceItemValue('investments'))}
-              >
-                Investimentos
-              </Button>
-            </li>
+            ))}
           </ul>
         </nav>
 
         {posts.length > 0 && (
-          <ul className="flex flex-wrap justify-evenly gap-3">
+          <ul className="flex flex-wrap justify-evenly gap-y-6">
+            {filteredPostsValue === 'all' &&
+              posts.map((post) => (
+                <li key={post.id}>
+                  <PostCard post={post} />
+                </li>
+              ))}
             {posts
-              .filter((post) => post.category === financeItemValue)
-              .slice(0, 5)
+              .filter((post) => post.category === filteredPostsValue)
               .map((post) => (
                 <li key={post.id}>
                   <PostCard post={post} />
