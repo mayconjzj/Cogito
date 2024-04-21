@@ -88,7 +88,7 @@ export const reversedPosts: PostProps[] = [
       }
     ],
     image:
-      '/posts/images/create-an-image-depicting-a-person-transitioning-from-a-chaotic-financial-scenario-with-debts-and-bi.jpeg',
+      '/posts/images/divida-zero-estrategias-infaliveis-para-sair-do-vermelho.jpeg',
     slug: 'divida-zero-estrategias-infaliveis-para-sair-do-vermelho',
     date: '19 de Abril de 2024'
   },
@@ -153,7 +153,7 @@ export const reversedPosts: PostProps[] = [
       }
     ],
     image:
-      '/posts/images/create-an-image-of-a-pathway-made-of-oversized-coins-and-financial-charts-leading-into-a-bright-hori.jpeg',
+      '/posts/images/primeiros-passos-no-investimento-um-guia-simples-para-iniciantes.jpeg',
     slug: 'primeiros-passos-no-investimento-um-guia-simples-para-iniciantes',
     date: '19 de Abril de 2024'
   },
@@ -245,7 +245,7 @@ export const reversedPosts: PostProps[] = [
       }
     ],
     image:
-      '/posts/images/generate-an-image-illustrating-10-smart-strategies-to-save-money-in-your-daily-life-showcasing-va.jpeg',
+      '/posts/images/10-estrategias-inteligentes-para-economizar-dinheiro-no-seu-dia-a-dia.jpeg',
     slug: '10-estrategias-inteligentes-para-economizar-dinheiro-no-seu-dia-a-dia',
     date: '20 de Abril de 2024'
   },
@@ -324,9 +324,53 @@ export const reversedPosts: PostProps[] = [
       }
     ],
     image:
-      '/posts/images/create-an-image-illustrating-how-to-build-an-emergency-fund-a-beginners-practical-guide-featuri.jpeg',
+      '/posts/images/como-construir-um-fundo-de-emergencia-guia-pratico-para-iniciantes.jpeg',
     slug: 'como-construir-um-fundo-de-emergencia-guia-pratico-para-iniciantes',
     date: '20 de Abril de 2024'
+  },
+  {
+    id: 5,
+    category: 'personal-finances',
+    title:
+      'Como Criar um Orçamento Financeiro Eficiente: Guia Passo a Passo para Iniciantes',
+    description:
+      'Descubra como criar e gerenciar um orçamento financeiro eficiente que o ajude a controlar seus gastos, economizar dinheiro e alcançar seus objetivos financeiros. Este guia passo a passo oferece dicas práticas e estratégias para iniciantes, ajudando a transformar suas finanças pessoais de forma positiva.',
+    contents: [
+      {
+        subTitle: 'Entendendo sua Situação Financeira',
+        descriptions: [
+          'Antes de começar a criar um orçamento financeiro, é essencial ter uma compreensão clara de sua situação financeira atual. Isso envolve avaliar suas receitas, despesas e hábitos de consumo.',
+          'Comece listando todas as suas fontes de renda mensal, incluindo salário, renda de freelancer, aluguéis ou outros rendimentos. Em seguida, examine suas despesas mensais, desde contas fixas como aluguel, contas de serviços públicos e mensalidades até despesas variáveis como alimentação, transporte e entretenimento.',
+          'Após listar todas as suas despesas, analise onde você pode reduzir gastos. Isso pode incluir cortar despesas supérfluas, renegociar contratos, buscar planos mais econômicos para serviços como internet e telefone, ou até mesmo explorar opções de transporte mais baratas.',
+          'Existem várias ferramentas e aplicativos disponíveis que podem ajudar na gestão de suas finanças, facilitando o acompanhamento de suas receitas e despesas. Considere utilizar planilhas financeiras ou aplicativos de orçamento para organizar suas finanças de forma eficaz.',
+          'Entender sua situação financeira atual é o primeiro passo crucial para criar um orçamento financeiro eficiente. Ao ter uma visão clara de suas finanças, você estará melhor preparado para tomar decisões informadas e construir um futuro financeiro mais sólido.'
+        ]
+      },
+      {
+        subTitle: 'Estabelecendo Metas Financeiras Claras',
+        descriptions: [
+          'Depois de entender sua situação financeira atual, o próximo passo é estabelecer metas financeiras claras e alcançáveis. Essas metas ajudarão a direcionar seus esforços de economia e a criar um plano financeiro sólido.',
+          'Comece identificando quais são seus objetivos financeiros de curto, médio e longo prazo. Isso pode incluir metas como economizar para uma emergência, quitar dívidas, fazer uma viagem, comprar uma casa ou se aposentar confortavelmente. Certifique-se de que suas metas sejam específicas, mensuráveis, alcançáveis, relevantes e com prazo definido (critérios SMART).',
+          'Depois de definir suas metas financeiras, é importante priorizá-las com base em sua importância e urgência. Em seguida, crie um plano detalhado para atingir cada uma delas. Isso pode envolver definir prazos específicos, calcular quanto dinheiro você precisa economizar mensalmente e identificar quais ajustes precisam ser feitos em seu orçamento para alcançar suas metas.',
+          'À medida que sua situação financeira ou suas prioridades mudam ao longo do tempo, é importante estar aberto a ajustar suas metas financeiras conforme necessário. Se surgirem imprevistos ou se você perceber que suas metas atuais não são mais realistas, não hesite em fazer os ajustes necessários para garantir que suas metas continuem sendo alcançáveis.',
+          'Estabelecer metas financeiras claras e criar um plano para alcançá-las é fundamental para o sucesso financeiro a longo prazo. Ao definir metas específicas e desenvolver estratégias para atingi-las, você estará no caminho certo para alcançar a estabilidade financeira e realizar seus sonhos.'
+        ]
+      },
+      {
+        subTitle: 'Elaborando e Gerenciando o Orçamento',
+        descriptions: [
+          'Com uma compreensão clara de sua situação financeira atual e metas financeiras estabelecidas, é hora de criar um orçamento detalhado que o ajude a alcançar essas metas. Aqui estão algumas etapas para criar e gerenciar seu orçamento de forma eficaz:',
+          'Comece listando todas as suas fontes de renda mensal e todas as despesas fixas e variáveis que você identificou anteriormente. Organize suas despesas em categorias, como moradia, transporte, alimentação, entretenimento, dívidas, economias, etc. Em seguida, aloque uma quantia específica para cada categoria com base em suas prioridades e metas financeiras.',
+          'Uma vez que seu orçamento esteja em vigor, é importante acompanhar regularmente seus gastos e compará-los com o que foi planejado. Isso pode ser feito por meio de planilhas financeiras, aplicativos de orçamento ou até mesmo anotações manuais. Ao acompanhar seus gastos, você pode identificar áreas onde está excedendo seu orçamento e fazer ajustes conforme necessário.',
+          'Ao longo do tempo, é provável que sua situação financeira ou suas prioridades mudem. Se isso acontecer, não hesite em fazer ajustes em seu orçamento para refletir essas mudanças. Isso pode incluir reavaliar suas metas financeiras, renegociar contas ou encontrar maneiras de reduzir despesas em determinadas áreas. O importante é garantir que seu orçamento esteja alinhado com suas metas financeiras e estilo de vida atual.',
+          'Criar e gerenciar um orçamento pode parecer desafiador no início, mas com prática e disciplina, você poderá controlar seus gastos, economizar dinheiro e alcançar suas metas financeiras. Lembre-se de que a chave para um orçamento bem-sucedido é a consistência e a capacidade de fazer ajustes conforme necessário para se adaptar às mudanças em sua vida financeira.'
+        ]
+      }
+    ],
+    image:
+      '/posts/images/como-criar-um-orcamento-financeiro-eficiente-guia-passo-a-passo-para-iniciantes.jpeg',
+    slug: 'como-criar-um-orcamento-financeiro-eficiente-guia-passo-a-passo-para-iniciantes',
+    date: '21 de Abril de 2024'
   }
 ];
 

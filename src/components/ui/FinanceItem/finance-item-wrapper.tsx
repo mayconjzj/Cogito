@@ -17,7 +17,7 @@ export const FinanceItemWrapper = ({
   return (
     <div
       className={cn(
-        `cursor-pointer p-6 space-y-6 max-w-[360px] w-full border-l-[4px] border-l-blue-300 ${active && 'border-l-blue-500'}`,
+        `cursor-pointer p-6 space-y-6 max-w-[360px] lg:min-w-[360px] w-full border-l-[4px] border-l-blue-300 ${active && 'border-l-blue-500'}`,
         className
       )}
       onClick={onClick}

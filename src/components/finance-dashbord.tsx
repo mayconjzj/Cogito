@@ -77,15 +77,17 @@ export const FinanceDashboard = () => {
               .map((post) => (
                 <li key={post.id}>
                   <div className="space-y-3 w-[350px]">
-                    <Link href={`/post/${post.slug}`}>
-                      <Image
-                        src={`${post.image}`}
-                        alt={post.title}
-                        width={350}
-                        height={300}
-                        className="object-cover w-full overflow-hidden rounded-xl"
-                      />
-                    </Link>
+                    {post.image && (
+                      <Link href={`/post/${post.slug}`}>
+                        <Image
+                          src={`${post.image}`}
+                          alt={post.title}
+                          width={350}
+                          height={300}
+                          className="object-cover w-full overflow-hidden rounded-xl"
+                        />
+                      </Link>
+                    )}
                     <div>
                       <Badge category={post.category}>
                         {post.category == 'personal-finances' &&
@@ -98,7 +100,7 @@ export const FinanceDashboard = () => {
                       <Link href={`/post/${post.slug}`}>
                         <h3 className="font-bold text-lg">{post.title}</h3>
                       </Link>
-                      <p className="text-muted text-sm leading-6">
+                      <p className="text-muted text-sm leading-6 line-clamp-[7]">
                         {post.description}
                       </p>
                     </div>
