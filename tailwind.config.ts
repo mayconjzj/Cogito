@@ -12,7 +12,7 @@ const config: Config = {
         inter: ['var(--font-inter)']
       },
       colors: {
-        background: 'var(--background)',
+        background: 'hsl(var(--background))',
         foreground: 'var(--foreground)',
         primary: 'var(--primary)',
         muted: 'var(--muted)',

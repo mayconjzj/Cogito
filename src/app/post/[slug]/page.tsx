@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import { posts } from '@/config/posts';
 
+import { BackLink } from '@/components/ui/back-link';
+
 import { shuffleArray } from '@/utils/shuffleArray';
 
 export const generateMetadata = ({
@@ -46,9 +48,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <section className="px-2 sm:px-12 lg:px-24 space-y-6">
       <article className="max-w-[860px]">
         <div className="space-y-6 pb-10">
-          <Link href="/" className="text-muted text-md hover:text-foreground">
-            Voltar
-          </Link>
+          <BackLink>Voltar</BackLink>
           <div>
             <p className="text-muted text-md">Publicado no dia {post?.date}</p>
           </div>
@@ -59,7 +59,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               alt={post.title}
               width={768}
               height={512}
-              className="object-cover w-full max-h-[450px]"
+              className="object-cover w-full max-h-[450px] rounded-xl overflow-hidden"
             />
           )}
           <p className="text-muted">{post?.description}</p>
@@ -86,7 +86,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                       alt={content.subTitle}
                       width={768}
                       height={512}
-                      className="object-cover w-full max-h-[550px] "
+                      className="object-cover w-full max-h-[550px] rounded-xl overflow-hidden"
                     />
                   )}
                 </div>
@@ -108,9 +108,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
                       <Image
                         src={post.image}
                         alt={post.title}
-                        width={768}
-                        height={512}
-                        className="object-cover min-w-[250px] sm:max-w-[250px] w-full"
+                        width={640}
+                        height={426}
+                        className="object-cover min-w-[250px] sm:max-w-[250px] w-full rounded-xl overflow-hidden"
                       />
                     )}
 

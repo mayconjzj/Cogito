@@ -1,13 +1,12 @@
 'use client';
-import Image from 'next/image';
-import Link from 'next/link';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import { posts } from '@/config/posts';
 import { setFinanceItemValue, states } from '@/redux/slice/finance-item';
 
-import { Badge } from './ui/badge';
 import { FinanceItem } from './ui/FinanceItem';
+import { PostCard } from './ui/post-card';
 
 export const FinanceDashboard = () => {
   const { financeItemValue } = useSelector(
@@ -19,9 +18,7 @@ export const FinanceDashboard = () => {
     <section className="px-2 sm:px-12 lg:px-24 space-y-6 sm:space-y-16">
       <div className="space-y-3">
         <span className="text-muted">Seus primeiros passos</span>
-        <h1 className="text-3xl sm:text-5xl font-extrabold">
-          Fique por dentro
-        </h1>
+        <h1 className="text-3xl sm:text-5xl font-extrabold">Comece por aqui</h1>
       </div>
       <div className="flex flex-col lg:flex-row gap-3">
         <ul className="flex flex-col">
@@ -76,35 +73,7 @@ export const FinanceDashboard = () => {
               .slice(0, 5)
               .map((post) => (
                 <li key={post.id}>
-                  <div className="space-y-3 w-[350px]">
-                    {post.image && (
-                      <Link href={`/post/${post.slug}`}>
-                        <Image
-                          src={`${post.image}`}
-                          alt={post.title}
-                          width={350}
-                          height={300}
-                          className="object-cover w-full overflow-hidden rounded-xl"
-                        />
-                      </Link>
-                    )}
-                    <div>
-                      <Badge category={post.category}>
-                        {post.category == 'personal-finances' &&
-                          'Finanças pessoais'}
-                        {post.category == 'debts' && 'Quitar dívidas'}
-                        {post.category == 'investments' && 'Investimentos'}
-                      </Badge>
-                    </div>
-                    <div className="px-3 space-y-3 ">
-                      <Link href={`/post/${post.slug}`}>
-                        <h3 className="font-bold text-lg">{post.title}</h3>
-                      </Link>
-                      <p className="text-muted text-sm leading-6 line-clamp-[7]">
-                        {post.description}
-                      </p>
-                    </div>
-                  </div>
+                  <PostCard post={post} />
                 </li>
               ))}
           </ul>
