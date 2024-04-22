@@ -46,8 +46,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <section className="px-2 sm:px-12 lg:px-24 space-y-6">
-      <article className="max-w-[860px]">
-        <div className="space-y-6 pb-10">
+      <article className="max-w-[860px] space-y-6">
+        <div className="space-y-6">
           <BackLink>Voltar</BackLink>
           <div>
             <p className="text-muted text-md">Publicado no dia {post?.date}</p>
@@ -64,35 +64,31 @@ export default async function Page({ params }: { params: { slug: string } }) {
           )}
           <p className="text-muted">{post?.description}</p>
         </div>
-        <div className="text-justify">
+
+        <ul className="space-y-6">
           {post?.contents &&
             post.contents.map((content) => (
-              <>
-                <div
-                  key={content.subTitle}
-                  className="space-y-6 py-10 border-t-border border-t-[0.5px]"
-                >
-                  <h2 className="font-bold text-xl">{content.subTitle}</h2>
-                  <div className="space-y-3">
-                    {content.descriptions?.map((description) => (
-                      <p className="md:text-lg text-justify" key={description}>
-                        {description}
-                      </p>
-                    ))}
-                  </div>
-                  {content.image && (
-                    <Image
-                      src={content.image}
-                      alt={content.subTitle}
-                      width={768}
-                      height={512}
-                      className="object-cover w-full rounded-xl overflow-hidden"
-                    />
-                  )}
+              <li key={content.subTitle} className="space-y-6">
+                <h2 className="font-bold text-xl">{content.subTitle}</h2>
+                <div className="space-y-3">
+                  {content.descriptions?.map((description) => (
+                    <p className="md:text-lg" key={description}>
+                      {description}
+                    </p>
+                  ))}
                 </div>
-              </>
+                {content.image && (
+                  <Image
+                    src={content.image}
+                    alt={content.subTitle}
+                    width={768}
+                    height={512}
+                    className="object-cover w-full rounded-xl overflow-hidden"
+                  />
+                )}
+              </li>
             ))}
-        </div>
+        </ul>
       </article>
       {posts.filter((post) => post.slug !== params.slug).length > 0 && (
         <section className="space-y-6">
