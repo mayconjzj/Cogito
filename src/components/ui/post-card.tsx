@@ -7,7 +7,7 @@ import { Badge } from './badge';
 
 export const PostCard = ({ post }: { post: PostProps }) => {
   return (
-    <div className="space-y-3 w-[350px]">
+    <div className="space-y-3 max-w-[350px] w-full">
       {post.image && (
         <Link href={`/post/${post.slug}`}>
           <Image
