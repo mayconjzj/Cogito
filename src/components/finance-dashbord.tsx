@@ -47,7 +47,7 @@ export const FinanceDashboard = () => {
               .slice(0, 5)
               .map((post) => (
                 <li key={post.id}>
-                  <PostCard post={post} />
+                  <PostCard post={post} className="w-[300px]" />
                 </li>
               ))}
           </ul>

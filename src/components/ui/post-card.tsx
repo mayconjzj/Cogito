@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { PostProps } from '@/config/posts';
 
 import { Badge } from './badge';
+import { cn } from '@/lib/utils';
 
-export const PostCard = ({ post }: { post: PostProps }) => {
+export const PostCard = ({ post, className }: { post: PostProps, className?: string }) => {
   return (
-    <div className="space-y-3 max-w-[350px] w-full">
+    <div className={cn('space-y-3 max-w-[350px] w-full', className)}>
       {post.image && (
         <Link href={`/post/${post.slug}`}>
           <Image
